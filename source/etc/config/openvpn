@@ -1,0 +1,6 @@
+package openvpn
+
+config openvpn safesignal
+        option enabled 1
+        option config /etc/openvpn/connection.conf
+        

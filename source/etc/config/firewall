@@ -1,0 +1,137 @@
+
+config rule
+	option src 'wan'
+	option proto 'udp'
+	option target 'ACCEPT'
+	option family 'ipv4'
+	option name 'Allow-DHCP-Renew WAN'
+	option dest_port '67-68'
+
+config rule
+	option target 'ACCEPT'
+	option proto 'udp'
+	option name 'Allow-DHCP-Renew VPN'
+	option family 'ipv4'
+	option src 'vpn'
+	option dest_port '67-68'
+
+config rule
+	option src 'wan'
+	option proto 'icmp'
+	option icmp_type 'echo-request'
+	option family 'ipv4'
+	option target 'ACCEPT'
+	option name 'Allow-Ping WAN'
+
+config rule
+	option target 'ACCEPT'
+	option name 'Allow-Ping VPN'
+	option family 'ipv4'
+	option proto 'icmp'
+	list icmp_type 'echo-request'
+	option src 'vpn'
+
+config defaults
+	option syn_flood '1'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'REJECT'
+	option disable_ipv6 '1'
+
+config zone
+	option name 'lan'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option network 'lan'
+	option forward 'ACCEPT'
+
+config zone
+	option name 'wan'
+	option input 'REJECT'
+	option output 'ACCEPT'
+	option masq '1'
+	option mtu_fix '1'
+	option network 'wan'
+	option forward 'ACCEPT'
+
+config include
+	option path '/etc/firewall.user'
+
+config zone
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option name 'vpn'
+	option masq '1'
+	option network 'vpn'
+	option forward 'ACCEPT'
+
+config rule
+	option target 'ACCEPT'
+	option src 'wan'
+	option proto 'tcp'
+	option dest_port '22'
+	option name 'ssh remote'
+
+config zone
+	option name 'guest'
+	option input 'ACCEPT'
+	option forward 'REJECT'
+	option output 'ACCEPT'
+	option network 'guest'
+
+config forwarding
+	option dest 'wan'
+	option src 'lan'
+
+config forwarding
+	option dest 'lan'
+	option src 'wan'
+
+config forwarding
+	option dest 'lan'
+	option src 'vpn'
+
+config forwarding
+	option dest 'wan'
+	option src 'vpn'
+
+config forwarding
+	option dest 'vpn'
+	option src 'lan'
+
+config forwarding
+	option dest 'vpn'
+	option src 'wan'
+
+config forwarding
+	option dest 'guest'
+	option src 'lan'
+
+config forwarding
+	option dest 'guest'
+	option src 'vpn'
+
+config forwarding
+	option dest 'guest'
+	option src 'wan'
+
+config forwarding
+	option dest 'lan'
+	option src 'guest'
+
+config forwarding
+	option dest 'vpn'
+	option src 'guest'
+
+config forwarding
+	option dest 'wan'
+	option src 'guest'
+
+config rule
+    option src 'guest'
+    option src_ip 192.168.11.0/24
+    option target 'REJECT'
+    option name 'Block-Guest-Access to RouterAdmin'
+    option dest 'lan'
+    option dest_port '80'
+    

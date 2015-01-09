@@ -1,0 +1,10 @@
+#!/bin/sh
+##
+## Always reset the splash mode to offline after boot
+## so that no guest can go only when VPN is still offline
+##
+/etc/scripts/nds-mode.sh offline &
+
+## Exit with code != 0 
+## (file will execute at every launch and not get deleted this way)
+exit 1

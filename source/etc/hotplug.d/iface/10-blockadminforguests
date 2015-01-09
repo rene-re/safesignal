@@ -1,0 +1,20 @@
+#!/bin/sh
+##
+## Block access to WAN gateway admin pages
+## Rerun everytime WAN goes up (in case WAN IP has changed, e.g. for pppoe connections or if device is connected to different WAN gateway)
+##
+
+if [ "$ACTION" = "ifup" -a "$INTERFACE" = "$(uci get safesignal.@device[0].wan_interface)" ]; then
+ 
+  ## Block access to admin page of WAN gateway (e.g. 3G admin page, main router)
+  ## Step 1) Identify and store wan gateway IP
+
+  wan_gateway=$(route | grep "$(uci get safesignal.@device[0].wan_interface)" | grep UGH -m 1 | awk '{ print $2 }')
+  uci set network.wan.gateway="$wan_gateway"
+
+  ## Step 2) Block access for guest wlan to admin pages at wan gateway (first delete a rule if it already exists)
+  iptables -D INPUT -i wlan0-1 -p tcp --dport 80 -d "$(uci get network.wan.gateway)" -j REJECT --reject-with tcp-reset
+  iptables -I INPUT -i wlan0-1 -p tcp --dport 80 -d "$(uci get network.wan.gateway)" -j REJECT --reject-with tcp-reset
+  iptables -D FORWARD -i wlan0-1 -p tcp --dport 80 -d "$(uci get network.wan.gateway)" -j REJECT --reject-with tcp-reset
+  iptables -I FORWARD -i wlan0-1 -p tcp --dport 80 -d "$(uci get network.wan.gateway)" -j REJECT --reject-with tcp-reset
+fi

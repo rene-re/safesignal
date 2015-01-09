@@ -1,0 +1,31 @@
+
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config interface 'lan'
+	option ifname 'wlan0'
+	option proto 'static'
+	option ipaddr '192.168.10.1'
+	option netmask '255.255.255.0'
+	option dns '8.8.4.4 8.8.8.8'
+
+config interface 'wan'
+	option ifname 'eth0'
+	option proto 'dhcp'
+
+config interface 'vpn'
+	option proto 'none'
+	option ifname 'tun0'
+	option defaultroute '1'
+	option peerdns '0'
+
+config interface 'guest'
+	option ifname 'wlan0-1'
+	option proto 'static'
+	option delegate '0'
+	option ipaddr '192.168.11.1'
+	option netmask '255.255.255.0'
+	option dns '8.8.4.4 8.8.8.8'

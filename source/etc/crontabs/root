@@ -1,0 +1,5 @@
+#min hour day month dayofweek command
+* * * * * /etc/scripts/check-openvpn.sh #Restart OpenVPN if necessary
+*/5 * * * * /etc/scripts/check-nds.sh #Restart NDS if necessary
+
+# This line needs to remain intact

@@ -1,0 +1,17 @@
+##
+## Certain ports should be routed through the WAN interface
+## to keep the VPN functioning (e. g. DNS)
+##
+
+## All pakets Mark 0x100 that the traffic uses ip lookup table 100
+
+# dns (port 53, udp+tcp outgoing)
+iptables -t mangle -A OUTPUT -p udp --dport 53 -j MARK --set-mark 0x100
+iptables -t mangle -A OUTPUT -p tcp --dport 53 -j MARK --set-mark 0x100
+
+# ssh (port 22, tcp incoming)
+iptables -t mangle -A INPUT -p tcp --dport 22 -j MARK --set-mark 0x100
+
+# ntpd (port 123, udp incoming+outgoing)
+iptables -t mangle -A OUTPUT -p udp --dport 123 -j MARK --set-mark 0x100
+iptables -t mangle -A INPUT -p udp --dport 123 -j MARK --set-mark 0x100
