@@ -1,7 +1,7 @@
 SafeSignal ermöglicht das einfache Aufsetzen eines rechtssicheren Routers bzw. Hotspots zum Betrieb in Gastronomie, Ferienwohnungen, Hotels sowie sonstigen Dienstleistungsbetrieben. Die Funktionalität ähnelt existieren kommerziellen Produkten von unter anderem sorglosinternet, freefii, SafeSpot, MaxSpot oder SmartSpot.
 SafeSignal ist Freie Software und veröffentlicht unter der Lizenz GNU GPLv3.
 
-*English summary: SafeSignal provides business with an easy and reliable hotspot solution specifically adapted to German law. It has been designed with cottages, hotels, cafes, restaurants, bars, and similar businesses in mind. The functionality is compareable to commercial solutions like ssorglosinternet, freefii, SafeSpot, MaxSpot or SmartSpot. SafeSignal is released under the GNU GPLv3. Notice: The README is provided in German only, while the source features comments in English.*
+*English summary: SafeSignal provides business with an easy and reliable hotspot solution specifically adapted to German law. It has been designed with cottages, hotels, cafes, restaurants, bars, and similar businesses in mind. The functionality is compareable to commercial solutions like sorglosinternet, freefii, SafeSpot, MaxSpot or SmartSpot. SafeSignal is released under the GNU GPLv3. Notice: The README is provided in German only, while the source features comments in English.*
 
 ## Überblick
 Betriebe mit Kunden- oder Gästekontakt stehen vor der Herausforderung diesen einen einfachen und unkomplizierten Zugang zum Internet zu ermöglichen. Auf Grund der deutschen Gesetzeslage (die s. g. Störerhaftung) können jene Betriebe kostenpflichtig abgemahnt werden, sofern ihre Kunden und Gäste beispielsweise urheberrechtlich geschützte Werke im Internet herunterladen.
