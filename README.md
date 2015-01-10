@@ -31,12 +31,12 @@ Bei Verwendung des empfohlenen Routers TP-Link TL-MR3020 beträgt der Stromverbr
 * 220 V-Steckdose (alternativ freier USB-Anschluss bei Verwendung des TP-Link TL-MR3020 als SafeSignal Hotspot ausreichend)
 
 #### Hard- und Software
-* Unterstützter Router als Basis für den SafeSignal Hotspot (derzeit lediglich TP-Link TL-MR3020, Bezug bspw. hier: [Amazon](http://www.amazon.de/TP-Link-TL-MR3020-WLAN-Router-frustfreie-Verpackung/dp/B00634PLTW/)
+* Unterstützter Router als Basis für den SafeSignal Hotspot (derzeit lediglich TP-Link TL-MR3020, Bezug bspw. hier: [Amazon](http://www.amazon.de/TP-Link-TL-MR3020-WLAN-Router-frustfreie-Verpackung/dp/B00634PLTW/))
 * SafeSignal Firmware zur Installation auf dem Router (Bezug hier)
-* VPN-Zugang zur Verwendung im SafeSignal Hotspot (empfohlen wird [Mullvad](http://www.mullvad.net))
+* VPN-Zugang zur Verwendung im SafeSignal Hotspot (empfohlen wird der Dienst [Mullvad](http://www.mullvad.net))
 
 ### Anschluss, Installation, Anpassung und Betrieb des SafeSignal Hotspots
-Die Installationsanleitung ist auf die Verwendung des Routers TP-Link TL-MR3020 und des VPN-Zugangs von Mullvad angepasst. Sofern ein anderer Router verwendet werden soll, ist eine Anpassung der Firmware zwingend erforderlich und setzt Linux sowie OpenWRT-Fachkenntnisse voraus (siehe "Für Entwickler: Firmware selbst kompilieren").
+Die Installationsanleitung ist auf die Verwendung des Routers TP-Link TL-MR3020 und des VPN-Zugangs von Mullvad angepasst. Sofern ein anderer Router verwendet werden soll, ist eine Anpassung der Firmware zwingend erforderlich und setzt Linux sowie OpenWRT-Fachkenntnisse voraus (siehe unten "Für Entwickler: Firmware selbst kompilieren").
 
 #### Vorbereitung des Routers TP-Link TL-MR3020
 1. Download der SafeSignal Hotspot Firmware (hier)
