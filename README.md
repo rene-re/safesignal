@@ -3,13 +3,13 @@ SafeSignal ist Freie Software und veröffentlicht unter der Lizenz GNU GPLv3.
 
 *English summary: SafeSignal provides business with an easy and reliable hotspot solution specifically adapted to German law. It has been designed with cottages, hotels, cafes, restaurants, bars, and similar businesses in mind. The functionality is compareable to commercial solutions like sorglosinternet, freefii, SafeSpot, MaxSpot or SmartSpot. SafeSignal is released under the GNU GPLv3. Notice: The README is provided in German only, while the source features comments in English.*
 
-## Überblick
+### Überblick
 Betriebe mit Kunden- oder Gästekontakt stehen vor der Herausforderung diesen einen einfachen und unkomplizierten Zugang zum Internet zu ermöglichen. Auf Grund der deutschen Gesetzeslage (die s. g. Störerhaftung) können jene Betriebe kostenpflichtig abgemahnt werden, sofern ihre Kunden und Gäste beispielsweise urheberrechtlich geschützte Werke im Internet herunterladen.
 
 Die Open Source-Variante basiert auf der kommerziellen Variante von SafeSignal. Sie ist voll funktionstüchtig und lediglich funktionsreduziert um wenige Funktionen, wie die Verwaltung und Fernsteuerung einer Vielzahl von Hotspots, optisch aufgewerteten Begrüßungsseiten (Splash pages), einem zeitgesteuerten Betrieb, sowie einem Betrieb an UMTS-Sticks. Bei Interesse an diesen Funktionen wenden Sie sich bitte per Email an René Reineke (rene.reineke@safesignal.de).
 
-## Vorteile des SafeSignal Hotspots
-### Deutliche Kostenvorteile gegenüber kommerziellen Lösungen
+### Vorteile des SafeSignal Hotspots
+#### Deutliche Kostenvorteile gegenüber kommerziellen Lösungen
 Existierende kommerzielle Lösungen sind zumeist teuer in der Anschaffung (50 bis 400 EUR) und verlangen eine  Servicepauschale im Abomodell (weitere 8,50 bis 50 EUR pro Monat). SafeSignal bietet eine vergleichbare Lösung auf Basis eines einfachen, handelsüblichen Routers sowie einer VPN-Verbindung. Der übliche Bezugspreis des Routers TP-Link TL-MR3020 (derzeit einziges unterstützes Modell, weitere können problemlos ergänzt werden) liegt bei 30 EUR. Eine übliche Monatspauschale für eine VPN-Verbindung liegt bei 5 EUR pro Monat (bspw. Mullvad).
 
 ### Aufbau auf bestehende Internetinfrastruktur im Betrieb
