@@ -54,10 +54,10 @@ Die Installationsanleitung ist auf die Verwendung des Routers TP-Link TL-MR3020 
 2. Mini-Stecker des USB-Kabels mit POWER der SafeBox verbinden und einen großen USB-Stecker mit dem Netzteil (der 3. Stecker bleibt frei).
 3. Netzteil mit Steckdose verbinden.
 
-Nach Abschluss der Installation ist zur Erfolgsprüfung ein Verbinden mit dem freien, nicht-passwortgeschützten WLAN-Netz "SafeSignal Internet" sinnvoll. War die Installation erfolgreich, so erscheint eine Begrü0ungsseite im Browser, die per Mausklick auf "Connect Now" den Zugang zum Internet ermöglicht. Ist dies nicht der Fall, so war die Installation nicht erfolgreich. Eine Fehlersuche ist daraufhin per Telnet-/SSH-Zugriff und Logfile-Analyse durchzuführen.
+Nach Abschluss der Installation ist zur Erfolgsprüfung ein Verbinden mit dem freien, nicht-passwortgeschützten WLAN-Netz "SafeSignal Internet" sinnvoll. War die Installation erfolgreich, so erscheint eine Begrüßungsseite im Browser, die per Mausklick auf "Connect Now" den Zugang zum Internet ermöglicht. Ist dies nicht der Fall, so war die Installation nicht erfolgreich. Eine Fehlersuche ist daraufhin per Telnet-/SSH-Zugriff und Logfile-Analyse durchzuführen.
 
 #### Anpassung
-Der SafeSignal Hotspot basiert auf dem weit verbreiteten OpenWRT-Betriebssystem für Router. Eine Anpassung der Installation ist über Konfigurationsdateien im Ordner */etc/config* möglich. Ausführliche Informationen dazu bietet das [Wiki von OpenWRT](http://wiki.openwrt.org/start).
+Der SafeSignal Hotspot basiert auf dem weit verbreiteten [OpenWRT](http://www.openwrt.org)-Betriebssystem für Router. Eine Anpassung der Installation ist über Konfigurationsdateien im Ordner */etc/config* möglich. Ausführliche Informationen dazu bietet das [Wiki von OpenWRT](http://wiki.openwrt.org/start).
 
 Die Begrüßungsseite wird von NoDogSplash ausgeliefert. Informationen zur visuellen und funktionellen Anpassung sind auf der [Webseite von NoDogSplash](https://github.com/nodogsplash/nodogsplash/blob/master/README.md) verfügbar. Die Konfigurationsdateien befinden sich im Ordner */etc/nodogsplash*.
 
