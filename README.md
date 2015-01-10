@@ -32,14 +32,14 @@ Bei Verwendung des empfohlenen Routers TP-Link TL-MR3020 beträgt der Stromverbr
 
 #### Hard- und Software
 * Unterstützter Router als Basis für den SafeSignal Hotspot (derzeit lediglich TP-Link TL-MR3020, Bezug bspw. hier: [Amazon](http://www.amazon.de/TP-Link-TL-MR3020-WLAN-Router-frustfreie-Verpackung/dp/B00634PLTW/))
-* SafeSignal Firmware zur Installation auf dem Router (Bezug hier)
+* SafeSignal Firmware zur Installation auf dem Router ([hier](https://github.com/renereineke/safesignal/tree/master/builds)
 * VPN-Zugang zur Verwendung im SafeSignal Hotspot (empfohlen wird der Dienst [Mullvad](http://www.mullvad.net))
 
 ### Anschluss, Installation, Anpassung und Betrieb des SafeSignal Hotspots
 Die Installationsanleitung ist auf die Verwendung des Routers TP-Link TL-MR3020 und des VPN-Zugangs von Mullvad angepasst. Sofern ein anderer Router verwendet werden soll, ist eine Anpassung der Firmware zwingend erforderlich und setzt Linux sowie OpenWRT-Fachkenntnisse voraus (siehe unten "Für Entwickler: Firmware selbst kompilieren").
 
 #### Vorbereitung des Routers TP-Link TL-MR3020
-1. Download der SafeSignal Hotspot Firmware (hier)
+1. Download der SafeSignal Hotspot Firmware ([hier](https://github.com/renereineke/safesignal/blob/master/builds/openwrt-ar71xx-generic-tl-mr3020-v1-squashfs-factory.bin) ODER sofern bereits OpenWRT auf dem Router lief: [alternative Firmware](https://github.com/renereineke/safesignal/blob/master/builds/openwrt-ar71xx-generic-tl-mr3020-v1-squashfs-sysupgrade.bin))
 2. Aufspielen der Firmware über die Web-Administrationsoberfläche des Routers ([dieser Beschreibung folgend](http://wiki.openwrt.org/toh/tp-link/tl-mr3020#method_using_web_gui_recommended))
 3. Neustart des Routers und 60 Sekunden warten
 4. Verbindung mit WLAN-Netz "SafeSignal Admin" aufbauen, Passwort "adminadmin"
