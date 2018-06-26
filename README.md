@@ -1,3 +1,5 @@
+![alt text](https://github.com/rene-re/safesignal/blob/master/logo_safesignal_60px.png "SafeSignal Logo")
+
 SafeSignal ermöglicht das einfache Aufsetzen eines rechtssicheren Routers bzw. Hotspots zum Betrieb in Gastronomie, Ferienwohnungen, Hotels sowie sonstigen Dienstleistungsbetrieben. Die Funktionalität ähnelt existieren kommerziellen Produkten von unter anderem sorglosinternet, freefii, SafeSpot, MaxSpot oder SmartSpot.
 SafeSignal ist Freie Software und veröffentlicht unter der Lizenz GNU GPLv3.
 
