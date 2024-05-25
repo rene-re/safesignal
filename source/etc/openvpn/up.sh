@@ -1,9 +1,9 @@
 #!/bin/sh
 ##
-## Set up the routing table
+## Set up the routing table on establishing VPN connection
 ##
 
-## Prepare/Initialize routing table lan
+## Prepare/Initialize routing table lan 100 (remove any prior entries)
 if [ "$( ip route show table 100 | wc -l )" -gt 0 ]; then
         ip route flush table 100;
 fi
@@ -23,7 +23,8 @@ ip route add default via "$route_net_gateway" dev "$(uci get safesignal.@device[
 ip rule del from "$(uci get safesignal.@device[0].subnet_admin)/24" table 100
 ip rule add from "$(uci get safesignal.@device[0].subnet_admin)/24" table 100
 
-## Route all DNS requests through WAN interface (previously marked in firewall user config)
+## Route certain requests with mark 0x100 through WAN interface 
+## (see configuration in firewall.user)
 ip rule del fwmark 0x100 table 100
 ip rule add fwmark 0x100 table 100
 
@@ -34,5 +35,5 @@ route add -net "$(uci get safesignal.@server[0].ip_2)" netmask 255.255.255.255 g
 ## Last step: flush the route cache
 ip route flush cache
 
-## Set NDS mode to online
+## Set NDS mode to online to allow guest users using the internet
 /etc/scripts/nds-mode.sh online

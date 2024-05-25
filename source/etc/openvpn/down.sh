@@ -1,7 +1,7 @@
 #!/bin/sh
 ##
-## Replace splash page of captive portal with one, which does not allow internet access
-## AND start nodogsplash (here to disable internet access)
+## Replace splash page of captive portal with one, which does not allow internet access,
+## deauthenticate existing users AND start nodogsplash (here to disable internet access)
 ##
 /etc/scripts/nds-mode.sh offline
 

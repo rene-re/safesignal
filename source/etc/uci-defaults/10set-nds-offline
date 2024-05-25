@@ -1,10 +1,10 @@
 #!/bin/sh
 ##
-## Always reset the splash mode to offline after boot
-## so that no guest can go only when VPN is still offline
-##
+## After booting, the system assumes that the VPN is offline.
+## By running the script below, we ensure that no guest can
+## access the internet until the VPN is ready at a later point.
 /etc/scripts/nds-mode.sh offline &
 
 ## Exit with code != 0 
-## (file will execute at every launch and not get deleted this way)
+## file will execute at every launch and not get deleted this way)
 exit 1

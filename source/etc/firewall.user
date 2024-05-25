@@ -1,17 +1,21 @@
 ##
-## Certain ports should be routed through the WAN interface
-## to keep the VPN functioning (e. g. DNS)
+## All guest-related traffic is routed via VPN with some exceptions.
+## These exceptions are necessary to keep the VPN functioning.
+##
+## This configuration flags certain traffic with mark 0x100 that is
+## routed through the WAN interface via IP lookup table 100.
 ##
 
-## All pakets Mark 0x100 that the traffic uses ip lookup table 100
-
 # dns (port 53, udp+tcp outgoing)
+# to resolve DNS names
 iptables -t mangle -A OUTPUT -p udp --dport 53 -j MARK --set-mark 0x100
 iptables -t mangle -A OUTPUT -p tcp --dport 53 -j MARK --set-mark 0x100
 
 # ssh (port 22, tcp incoming)
+# to allow administrative remote access to the router
 iptables -t mangle -A INPUT -p tcp --dport 22 -j MARK --set-mark 0x100
 
 # ntpd (port 123, udp incoming+outgoing)
+# to sync date and time from a remote time server 
 iptables -t mangle -A OUTPUT -p udp --dport 123 -j MARK --set-mark 0x100
 iptables -t mangle -A INPUT -p udp --dport 123 -j MARK --set-mark 0x100
