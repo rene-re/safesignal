@@ -1,3 +1,29 @@
+#
+# OpenWRT Build Configuration for TP-Link MR3020 v1
+# ----------------------------------------------
+#
+# This configuration file defines the build settings for OpenWRT targeting
+# the TP-Link MR3020 v1 router hardware. Key features include:
+#
+# - Target: AR71XX platform (Atheros)
+# - Compiler: GCC 4.9 Linaro
+# - Key packages:
+#   * OpenVPN with OpenSSL support
+#   * NoDogSplash captive portal
+#   * Basic networking tools (iptables, ip)
+#
+# Notable configuration choices:
+# - IPv6 is disabled
+# - USB support is disabled
+# - PPP is disabled
+# - Minimal kernel (no debug, no swap, no core dumps)
+# - Uses minimal BusyBox configuration with essential utilities
+#
+# Build options:
+# - Uses mklibs for size optimization
+# - Strips kernel exports
+# - Cleans IPKG files
+#
 CONFIG_TARGET_ar71xx=y
 CONFIG_TARGET_ar71xx_generic=y
 CONFIG_TARGET_ar71xx_generic_TLMR3020=y
